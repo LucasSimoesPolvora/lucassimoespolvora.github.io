@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import Inter from "next/font/google"
+import RoundButton from "../components/roundButton";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Image
           src="/bgImg.png"
           alt="Background Image"
+          priority={true}
           layout="fill"
           objectFit="cover"
           className="grayscale"
@@ -34,6 +36,11 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <button 
+      className="fixed bottom-4 left-1/2 w-14 h-14 hover:z-50 bg-gray-200 hover:bg-gray-700 text-white font-bold rounded-full shadow-lg transition duration-300"
+      onClick={() => console.log('Button clicked!')}>
+      ↓
+    </button>
     </div>
   );
 }
